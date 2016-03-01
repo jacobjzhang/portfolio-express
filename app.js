@@ -6,24 +6,25 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-// var routes = require('./routes/index');
-// Routing... inclusive of callback function w/ request and response parameters
-app.get('/', function(req, res) {
-  res.send("This is a server response on the home page");
-});
-
-app.listen(3000, function() {
-  console.log("The application is running on localhost:3000"); 
-})
-
-var users = require('./routes/users');
-
 // specify that app is a new express application
 var app = express();
 
+var routes = require('./routes');
+// Routing... inclusive of callback function w/ request and response parameters
+app.get('/', routes.home);
+
+// For Portfolio Item
+app.get('/portfolio_item/:item_number?', routes.portfolio_single);
+
+// app.listen(3000, function() {
+//   console.log("The application is running on localhost:3000"); 
+// });
+
+var users = require('./routes/users');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
+app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -34,12 +35,12 @@ app.use(cookieParser());
 // app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', routes);
+// app.use('/', routes);
 app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('Jacob didn\'t create this page yet!');
   err.status = 404;
   next(err);
 });

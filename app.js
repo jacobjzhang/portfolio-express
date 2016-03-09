@@ -9,16 +9,16 @@ var bodyParser = require('body-parser');
 // specify that app is a new express application
 var app = express();
 
-var routes = require('./routes');
-// Routing... inclusive of callback function w/ request and response parameters
-app.get('/', routes.home);
 
+// Routing... inclusive of callback function w/ request and response parameters
+var routes = require('./routes');
+app.get('/', routes.home);
 // For Portfolio Item
 app.get('/portfolio_item/:item_number?', routes.portfolio_single);
 
-// app.listen(3000, function() {
-//   console.log("The application is running on localhost:3000"); 
-// });
+
+var path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
 
 var users = require('./routes/users');
 
@@ -26,8 +26,7 @@ var users = require('./routes/users');
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

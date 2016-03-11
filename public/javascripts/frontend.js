@@ -1,35 +1,21 @@
 // create the module and name it scotchApp
-var jakeApp = angular.module('jakeportfolio', ['ui.router']);
+var jakeApp = angular.module('jakeportfolio', ['ngRoute']);
 
-jakeApp.config(function($stateProvider, $urlRouterProvider) {
-  //
-  // For any unmatched url, redirect to /state1
-  $urlRouterProvider.otherwise("/state1");
-  //
-  // Now set up the states
-  $stateProvider
-    .state('state1', {
-      url: "/state1",
-      templateUrl: "/pages/home.html"
-    })
-    .state('state1.list', {
-      url: "/list",
-      templateUrl: "partials/state1.list.html",
-      controller: function($scope) {
-        $scope.items = ["A", "List", "Of", "Items"];
-      }
-    })
-    .state('state2', {
-      url: "/state2",
-      templateUrl: "/pages/item.html"
-    })
-    .state('state2.list', {
-      url: "/list",
-      templateUrl: "partials/state2.list.html",
-      controller: function($scope) {
-        $scope.things = ["A", "Set", "Of", "Things"];
-      }
-    });
+jakeApp.config(function($routeProvider){
+        $routeProvider
+        .when('/', {
+          templateUrl: '/pages/home.html',
+          controller: 'mainController'
+        })
+        .when('/portfolio_item/:item_number', {
+          templateUrl: '/pages/item.html',
+          controller: 'portController'
+        })
+        .when('/test', {
+          templateUrl: '/pages/test.html',
+          controller: 'mainController'
+        })
+        .otherwise({ redirectTo: '/pages/test.html' });
 });
 
 // create the controller and inject Angular's $scope
@@ -40,18 +26,24 @@ jakeApp.controller('mainController', ['$scope', '$rootScope', '$http',
       $http.get('../../portfolio.json').success(function (data) {
         $rootScope.portfolio = data.movies;
       });
-      
-      // create a message to display in our view
-      $scope.portfolio = $rootScope.portfolio;
+
 }]);
 
-jakeApp.controller('portController', ['$scope', '$routeParams', '$http',
-    function($scope, $routeParams, $http) {
+jakeApp.controller('portController', ['$scope', '$rootScope', '$routeParams', '$http',
+    function($scope, $rootScope, $routeParams, $http) {
 
       // Load pages on startup
-      $scope.item_number = $routeParams.item_number;
-      $scope.message = "Test";
+      var item_number = $routeParams.item_number;
+
+      $scope.message = "";
       console.log("Using Portfolio Controller");
+      
+      // Load pages on startup
+      $http.get('../../portfolio.json').success(function (data) {
+        $rootScope.portfolio = data;
+      });
+      
+      $scope.item = $rootScope.portfolio;
 }]);
 
 jakeApp.directive('typewrite', ['$timeout', function ($timeout) {

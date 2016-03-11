@@ -2,7 +2,6 @@
 <html lang="en" ng-app="jakeportfolio">
 
 <head>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +10,7 @@
 
 <title><%= title %></title>
 
+<base href="/" />
 <!-- Bootstrap Core CSS -->
 <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
 
@@ -93,7 +93,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div ui-view></div>
+                    <div ng-view></div>
                 </div>
             </div>
         </div>
@@ -187,9 +187,9 @@
     <script src="/javascripts/grayscale.js"></script>
 
     <!-- AngularJS -->
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
-    <script src="/javascripts/angular-ui-router.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.5.0/angular-route.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-animate.min.js"></script>
     <script src="/javascripts/frontend.js"></script>
 
 

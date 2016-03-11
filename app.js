@@ -9,22 +9,36 @@ var bodyParser = require('body-parser');
 // specify that app is a new express application
 var app = express();
 
-
 // Routing... inclusive of callback function w/ request and response parameters
-var routes = require('./routes');
-app.get('/', routes.home);
+// var routes = require('./routes');
+app.use('/javascripts', express.static(__dirname + '/public/javascripts'));
+app.use('/images', express.static(__dirname + '/public/images'));
+app.use('/stylesheets', express.static(__dirname + '/public/stylesheets'));
+app.use('/pages', express.static(__dirname + '/public/pages'));
+app.use('/partials', express.static(__dirname + '/views/partials'));
+app.use('/portfolio.json', express.static(__dirname + 'portfolio.json'));
+
+app.get('*', function (req, res) {
+    res.sendFile(__dirname + '/public/index.html');
+});
+
+// app.get('/', routes.home);
+// app.get('*', routes.home);
+
+// app.get('/*', routes.home);
+// app.get('/portfolio_thing/:item_number?', routes.home);
+
 // For Portfolio Item
-app.get('/portfolio_item/:item_number?', routes.portfolio_single);
+// app.get('/portfolio_item/:item_number?', routes.portfolio_single);
 
-
-var path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
+// var path = require('path');
+// app.use(express.static(path.join(__dirname, 'public')));
 
 var users = require('./routes/users');
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
 
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));

@@ -29,6 +29,21 @@ $(function() {
     });
 });
 
+// For typing effect on brand heading
+// $(function() {
+//         $(".brand-heading").typed({
+//             strings: ["Hi, I'm Jake."],
+//             typeSpeed: 0,
+//             contentType: 'text',
+//             cursorChar: ""
+//     });
+// });
+        
+// For self description effect after the typing.
+$('.intro-text').delay(2000).queue(function(){
+    $(this).addClass("animated tada");
+});
+
 // Closes the Responsive Menu on Menu Item Click
 $('.navbar-collapse ul li a').click(function() {
   if ($(this).attr('class') != 'dropdown-toggle active' && $(this).attr('class') != 'dropdown-toggle') {

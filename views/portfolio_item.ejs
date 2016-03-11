@@ -12,13 +12,30 @@
     <!-- Navigation -->
 
     <% include partials/header.ejs %>
-    
+
     <!-- Intro Header -->
-    <header class="intro">
+    <header class="intro" ng-controller="mainController">
         <div class="intro-body">
-            <div class="container" ng-controller="mainController">
+            <div class="container">
                 <div class="row">
-                    <div ng-view></div>
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="item-heading"><%= title %></h1>
+                        <p class="intro-text">Software engineer and project manager.<br>{{ message }}</p>
+                        <ul class="list-inline banner-social-buttons">
+                            <li>
+                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                            </li>
+                            <li>
+                                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                            </li>
+                        </ul>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,8 +103,6 @@
 
     <!-- Map Section -->
     <div id="map"></div>
-
-
 
     <% include partials/footer.ejs %>
 

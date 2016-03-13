@@ -3,47 +3,46 @@ var jakeApp = angular.module('jakeportfolio', ['ngRoute']);
 
 jakeApp.config(function($routeProvider){
         $routeProvider
-        .when('/', {
-          templateUrl: '/pages/home.html',
-          controller: 'mainController'
-        })
+	    // .when('/', {
+	    //   templateUrl: '/pages/home.html',
+	    //   controller: 'mainController'
+	    // })
         .when('/portfolio_item/:item_number', {
           templateUrl: '/pages/item.html',
-          controller: 'portController'
-        })
-        .when('/test', {
-          templateUrl: '/pages/test.html',
           controller: 'mainController'
         })
-        .otherwise({ redirectTo: '/pages/test.html' });
+        .otherwise({
+        	templateUrl: '/pages/home.html',
+	    	controller: 'mainController' });
 });
 
 // create the controller and inject Angular's $scope
-jakeApp.controller('mainController', ['$scope', '$rootScope', '$http',
-    function($scope, $rootScope, $http) {
-
-      // Load pages on startup
-      $http.get('../../portfolio.json').success(function (data) {
-        $rootScope.portfolio = data.movies;
-      });
-
-}]);
-
-jakeApp.controller('portController', ['$scope', '$rootScope', '$routeParams', '$http',
+jakeApp.controller('mainController', ['$scope', '$rootScope', '$routeParams', '$http',
     function($scope, $rootScope, $routeParams, $http) {
 
       // Load pages on startup
-      var item_number = $routeParams.item_number;
-
-      $scope.message = "";
-      console.log("Using Portfolio Controller");
-      
-      // Load pages on startup
       $http.get('../../portfolio.json').success(function (data) {
-        $rootScope.portfolio = data;
+        angular.forEach(data.movies, function(item) {
+         if (item.episode_number == $routeParams.item_number) 
+          $scope.page = item;
+        });
+      	$rootScope.portfolio = data.movies;
       });
       
-      $scope.item = $rootScope.portfolio;
+      $scope.fullView = function()
+	    {
+	    	var screenwidth = $(window).width();
+		    var screenheight = $(window).height();
+		    $(document).ready(function() {
+			    $(".intro").width(screenwidth).height(screenheight);
+			});
+					
+			$(window).resize(function() {
+			    $(".intro").width(screenwidth).height(screenheight);
+			    $(".intro").css("background-size", "cover");
+			});  
+	   };
+    	
 }]);
 
 jakeApp.directive('typewrite', ['$timeout', function ($timeout) {
@@ -111,3 +110,15 @@ jakeApp.directive('typewrite', ['$timeout', function ($timeout) {
 		};
 
 	}]);
+	
+jakeApp.directive('afterRender', ['$timeout', function ($timeout) {
+    var def = {
+        restrict: 'A',
+        terminal: true,
+        transclude: false,
+        link: function (scope, element, attrs) {
+            $timeout(scope.$eval(attrs.afterRender), 100);  //Calling a scoped method
+        }
+    };
+    return def;
+}]);

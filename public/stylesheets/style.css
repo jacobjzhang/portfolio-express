@@ -182,6 +182,10 @@ a:focus {
     font-size: 18px;
 }
 
+.intro .intro-body .tech-text {
+    font-size: 20px;
+}
+
 @media(min-width:768px) {
     .intro {
         height: 100%;

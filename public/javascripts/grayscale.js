@@ -1,13 +1,5 @@
-/*!
- * Start Bootstrap - Grayscale Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-// jQuery to collapse the navbar on scroll
 function collapseNavbar() {
     var $window = $(window);
-//  if ($(".navbar").offset().top > 50) {
     if ($window.scrollTop() > 500) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
@@ -29,16 +21,6 @@ $(function() {
     });
 });
 
-// For typing effect on brand heading
-// $(function() {
-//         $(".brand-heading").typed({
-//             strings: ["Hi, I'm Jake."],
-//             typeSpeed: 0,
-//             contentType: 'text',
-//             cursorChar: ""
-//     });
-// });
-        
 // For self description effect after the typing.
 $('.intro-text').delay(2000).queue(function(){
     $(this).addClass("animated tada");

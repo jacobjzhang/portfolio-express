@@ -16,6 +16,7 @@ app.use('/stylesheets', express.static(__dirname + '/public/stylesheets'));
 app.use('/pages', express.static(__dirname + '/public/pages'));
 app.use('/partials', express.static(__dirname + '/views/partials'));
 app.use('/portfolio.json', express.static(__dirname + '/portfolio.json'));
+app.use('/favicon.ico', express.static(__dirname + '/public/favicon.ico'));
 
 app.get('/*', function (req, res) {
     res.sendFile(__dirname + '/public/index.html');

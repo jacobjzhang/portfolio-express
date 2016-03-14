@@ -1,12 +1,12 @@
 {
   "movies": [{
-    "title" : "What's Your Market Rate?",
+    "title" : "What's Your Market Rate? (In Progress)",
     "episode_number" : "1",
-    "role" : "Full Stack Developer",
+    "role" : "Full Stack Developer and Designer",
     "description" : "A fun project for developers to find out what their market rate is based on variables",
     "tech_used" : "Javascript, HTML, CSS, PHP, MySQL",
     "poster" : "whatsyourmarketrate.png",
-    "link" : "http://whatsyourmarketrate.herokuapp.com"
+    "link" : ""
   },
 
   {

@@ -9,13 +9,13 @@
                         <p class="intro-text">Software engineer and project manager.<br>I love building beautiful things. Check some of them out below.</p>
                         <ul class="list-inline banner-social-buttons">
                             <li>
-                                <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                                <a href="https://linkedin.com/in/jacobjzhang" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
                             </li>
                             <li>
-                                <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                                <a href="https://github.com/jacobjzhang" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                             </li>
                             <li>
-                                <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                                <a href="https://twitter.com/jacobjzhang" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Twitter</span></a>
                             </li>
                         </ul>
                         <a href="#about" class="btn btn-circle page-scroll">
@@ -38,11 +38,13 @@
         
         <div class="row">            
                 <div class="col-md-4 portfolio-item" ng-repeat="item in portfolio">
-                    <img src="images/{{item.poster}}" class="img-rounded" style="width:350px;height:350px;">
-                    <div class="item-info-overlay">
-    			  		<h3>{{item.title}}</h3>
-    			  		<h4>View More <i class="fa fa-arrow-right"></i></h4>
-    			  	</div>
+                    <a href="/#/portfolio_item/{{item.episode_number}}">
+                        <img src="images/{{item.poster}}" class="img-rounded" style="width:350px;height:300px;">
+                        <div class="item-info-overlay">
+        			  		<h3>{{item.title}}</h3>
+        			  		<h4>View More <i class="fa fa-arrow-right"></i></h4>
+        			  	</div>
+    			  	</a>
                 </div>
         </div>
         </div>
@@ -54,6 +56,7 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Me</h2>
                 <p>Multi-disciplined professional with experience in the evaluation, design, development, and overall delivery of software products, including web, mobile, and native applications. My specialties are front-end engineering and design, project management, and the utilization of MVC frameworks.</p>
+                <p>Technical Skills: Javascript, PHP, HTML, CSS, SQL, Python, some C++, Photoshop</p>
             </div>
         </div>
     </section>
@@ -71,4 +74,4 @@
     </section>
 
     <!-- Map Section -->
-    <div id="map" after-render="fullView"></div>
+    <div after-render="fullView"></div>

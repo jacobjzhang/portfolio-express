@@ -1,60 +1,82 @@
 {
   "movies": [{
-    "title" : "ChilisJobs.com",
+    "title" : "What's Your Market Rate?",
     "episode_number" : "1",
-    "role" : "Lead Developer and Project Manager",
-    "description" : "Chili's was a client of Hodes looking for a brand new career website.",
-    "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
-    "poster" : "chilisjobs_browser.png",
-    "hero_image" : "star_wars_episode_1_hero.jpg"
+    "role" : "Full Stack Developer",
+    "description" : "A fun project for developers to find out what their market rate is based on variables",
+    "tech_used" : "Javascript, HTML, CSS, PHP, MySQL",
+    "poster" : "whatsyourmarketrate.png",
+    "link" : "http://whatsyourmarketrate.herokuapp.com"
   },
 
   {
-    "title" : "crestandco.com",
+    "title" : "ChilisJobs.com",
     "episode_number" : "2",
-    "role" : "Frontend Developer",
+    "role" : "Lead Developer and Project Manager",
     "description" : "Chili's was a client of Hodes looking for a brand new career website.",
     "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
-    "poster" : "crestandco.png",
-    "hero_image" : "star_wars_episode_1_hero.jpg"
-  },
-
-  {
-    "title" : "careers.pitneybowes.com",
-    "episode_number" : "3",
-    "role" : "Lead Developer and Project Manager",
-    "description" : "Pitney Bowes was a client of Hodes looking for a brand new career website.",
-    "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
-    "poster" : "pitneybowes.png",
-    "hero_image" : "star_wars_episode_1_hero.jpg"
+    "poster" : "chilisjobs.png",
+    "link" : "http://chilisjobs.com"
   },
 
   {
     "title" : "Simplify Books",
-    "episode_number" : "4",
+    "episode_number" : "3",
     "role" : "Full Stack Developer",
     "description" : "A project for 100-words-or-less book reviews built on Ruby on Rails.",
-    "tech_used" : "Javascript, HTML, CSS, Ruby, Rails",
+    "tech_used" : "Javascript, Ruby, Rails, HTML, CSS",
     "poster" : "simplify.png",
-    "hero_image" : "star_wars_episode_1_hero.jpg"
+    "link" : "http://knowledgesimplified.herokuapp.com"
   },
 
   {
-    "title" : "Star Wars: Episode V - The Empire Strikes Back",
+    "title" : "Careers.PitneyBowes.com",
+    "episode_number" : "4",
+    "role" : "Lead Developer and Project Manager",
+    "description" : "Pitney Bowes was a client of Hodes looking for a brand new career website.",
+    "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
+    "poster" : "pitneybowes.png",
+    "link" : "http://careers.pitneybowes.com"
+  },
+
+  {
+    "title" : "Time Tracking Robot",
     "episode_number" : "5",
-    "main_characters" : ["Luke Skywalker", "Han Solo", "Princess Leia Organa", "Darth Vader", "C-3P0", "R2-D2", "Chewbacca", "Lando Calrissian", "Boba Fett"],
-    "description" : "Fleeing the evil Galactic Empire, the Rebels abandon their new base in an assault with the Imperial AT-AT walkers on the ice world of Hoth. Princess Leia, Han Solo, Chewbacca and the droid C-3PO escape in the Millennium Falcon, but are later captured by Darth Vader on Bespin. Meanwhile, Luke Skywalker and the droid R2-D2 follows Obi-Wan Kenobi's posthumous command, and receives Jedi training from Master Yoda on the swamp world of Dagobah. Will Skywalker manage to rescue his friends from the Dark Lord?",
-    "poster" : "star_wars_episode_5_poster.png",
-    "hero_image" : "star_wars_episode_5_hero.jpg"
+    "role" : "Lead Hacker",
+    "description" : "A nifty little Python script to fill out time.hodes.com",
+    "tech_used" : "Python... soon to add Flask.",
+    "poster" : "timetracker.png",
+    "link" : "https://github.com/jacobjzhang/time-tracker"
   },
 
   {
-    "title" : "Star Wars: Episode VI - Return of the Jedi",
+    "title" : "TiffanyCareers.com",
     "episode_number" : "6",
-    "main_characters" : ["Luke Skywalker", "Han Solo", "Princess Leia Organa", "Darth Vader", "C-3P0", "Chewbacca", "The Emperor", "Boba Fett"],
-    "description" : "Darth Vader and the Empire are building a new, indestructible Death Star. Meanwhile, Han Solo has been imprisoned, and Luke Skywalker has sent R2-D2 and C-3PO to try and free him. Princess Leia - disguised as a bounty hunter - and Chewbacca go along as well. The final battle takes place on the moon of Endor, with its natural inhabitants, the Ewoks, lending a hand to the Rebels. Will Darth Vader and the Dark Side overcome the Rebels and take over the universe?",
-    "poster" : "star_wars_episode_6_poster.png",
-    "hero_image" : "star_wars_episode_6_hero.jpg"
+    "role" : "Frontend Developer",
+    "description" : "Tiffany and Co. was a client of Hodes looking for a brand new career website.",
+    "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
+    "poster" : "tiffanycareers.png",
+    "link" : "https://tiffanycareers.com"
+  },
+
+  {
+    "title" : "CrestandCo.com",
+    "episode_number" : "7",
+    "role" : "Frontend Developer",
+    "description" : "A luxury e-commerce site built on Magento.",
+    "tech_used" : "Javascript, HTML, CSS, PHP, Magento Enterprise",
+    "poster" : "crestandco.png",
+    "link" : "https://crestandco.com"
+  },
+
+  {
+    "title" : "Elysee.us",
+    "episode_number" : "8",
+    "role" : "Frontend Developer",
+    "description" : "A luxury e-commerce startup built on WordPress.",
+    "tech_used" : "Javascript, HTML, CSS, PHP, WordPress",
+    "poster" : "elysee.png",
+    "link" : "https://elysee.us"
   }]
 
 }

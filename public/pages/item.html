@@ -9,15 +9,17 @@
                 <div class="col-md-4">
                     <h3>{{page.title}}</h3>
                     <p class="intro-text">
-                        {{page.description}}                       
+                        {{page.role}}                       
                     </p>
                     <p class="tech-text">
                         <strong>Technologies Used:</strong><br />
                         {{page.tech_used}}                       
                     </p>
-                    <a href="#about" class="btn btn-circle page-scroll">
+                    <p><strong>Read More:</strong><br />
+                    <a href="" ng-click="scrollTo('about')" class="btn btn-circle page-scroll">
                         <i class="fa fa-angle-double-down animated"></i>
                     </a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -25,12 +27,12 @@
 </header>
 
 <!-- About Section -->
-<section id="about" class="container content-section text-center" after-render="fullView">
+<section id="about" class="container content-section text-center">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <p class="tech-text">
                 <strong>Technologies Used:</strong><br />
-                {{page.tech_used}}                       
+                {{page.description}}                       
             </p>
             <ul class="list-inline banner-social-buttons">
                 <li>
@@ -47,3 +49,5 @@
         </div>
     </div>
 </section>
+
+<div after-render="fullView"></div>

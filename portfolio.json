@@ -10,21 +10,23 @@
   },
 
   {
-    "title" : "Star Wars: Episode II - Attack of the Clones",
+    "title" : "crestandco.com",
     "episode_number" : "2",
-    "main_characters" : ["Obi-Wan Kenobi", "Anakin Skywalker", "Count Dooku", "Padmé Amidala", "Mace Windu", "Yoda", "Jango Fett", "Supreme Chancellor Palpatine"],
-    "description" : "Ten years after the 'Phantom Menace' threatened the planet Naboo, Padmé Amidala is now a Senator representing her homeworld. A faction of political separatists, led by Count Dooku, attempts to assassinate her. There are not enough Jedi to defend the Republic against the threat, so Chancellor Palpatine enlists the aid of Jango Fett, who promises that his army of clones will handle the situation. Meanwhile, Obi-Wan Kenobi continues to train the young Jedi Anakin Skywalker, who fears that the Jedi code will forbid his growing romance with Amidala.",
-    "poster" : "star_wars_episode_2_poster.png",
-    "hero_image" : "star_wars_episode_2_hero.jpg"
+    "role" : "Frontend Developer",
+    "description" : "Chili's was a client of Hodes looking for a brand new career website.",
+    "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
+    "poster" : "crestandco.png",
+    "hero_image" : "star_wars_episode_1_hero.jpg"
   },
 
   {
-    "title" : "Star Wars: Episode III - Revenge of the Sith",
+    "title" : "careers.pitneybowes.com",
     "episode_number" : "3",
-    "main_characters" : ["Obi-Wan Kenobi", "Anakin Skywalker", "Count Dooku", "Padmé Amidala", "Mace Windu", "Yoda", "C-3PO", "Supreme Chancellor Palpatine"],
-    "description" : "Three years after the onset of the Clone Wars; the noble Jedi Knights are spread out across the galaxy leading a massive clone army in the war against the Separatists. After Chancellor Palpatine is kidnapped, Jedi Master Obi-Wan Kenobi and his former Padawan, Anakin Skywalker, are dispatched to eliminate the evil General Grievous. Meanwhile, Anakin's friendship with the Chancellor arouses suspicion in the Jedi Order, and dangerous to the Jedi Knight himself. When the sinister Sith Lord, Darth Sidious, unveils a plot to take over the galaxy, the fate of Anakin, the Jedi order, and the entire galaxy is at stake. Upon his return, Anakin Skywalker's wife Padme Amidala is pregnant, but he is having visions of her dying in childbirth. Anakin Skywalker ultimately turns his back on the Jedi, thus completing his journey to the dark side and his transformation into Darth Vader. Obi-Wan Kenobi must face his former apprentice in a ferocious lightsaber duel on the fiery world of Mustafar.",
-    "poster" : "star_wars_episode_3_poster.png",
-    "hero_image" : "star_wars_episode_3_hero.jpg"
+    "role" : "Lead Developer and Project Manager",
+    "description" : "Chili's was a client of Hodes looking for a brand new career website.",
+    "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
+    "poster" : "pitneybowes.png",
+    "hero_image" : "star_wars_episode_1_hero.jpg"
   },
 
   {

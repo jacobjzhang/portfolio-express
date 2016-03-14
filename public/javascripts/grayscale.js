@@ -1,6 +1,6 @@
 function collapseNavbar() {
     var $window = $(window);
-    if ($window.scrollTop() > 500) {
+    if ($window.scrollTop() > 100) {
         $(".navbar-fixed-top").addClass("top-nav-collapse");
     } else {
         $(".navbar-fixed-top").removeClass("top-nav-collapse");
@@ -184,3 +184,8 @@ function init() {
         icon: image
     });
 }
+
+$(window).resize(function() {
+    $(".intro").width(screenwidth).height(screenheight);
+    $(".intro").css("background-size", "cover");
+});  

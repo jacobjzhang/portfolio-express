@@ -17,8 +17,8 @@ jakeApp.config(function($routeProvider){
 });
 
 // create the controller and inject Angular's $scope
-jakeApp.controller('mainController', ['$scope', '$rootScope', '$routeParams', '$http',
-    function($scope, $rootScope, $routeParams, $http) {
+jakeApp.controller('mainController', ['$scope', '$rootScope', '$routeParams', '$http', '$location', '$anchorScroll', 
+    function($scope, $rootScope, $routeParams, $http, $location, $anchorScroll) {
 
       // Load pages on startup
       $http.get('../../portfolio.json').success(function (data) {
@@ -29,6 +29,11 @@ jakeApp.controller('mainController', ['$scope', '$rootScope', '$routeParams', '$
       	$rootScope.portfolio = data.movies;
       });
       
+      $scope.scrollTo = function(id) {
+      	$location.hash(id);
+      	$anchorScroll();
+   	  };
+      
       $scope.fullView = function()
 	    {
 	    	var screenwidth = $(window).width();
@@ -36,11 +41,7 @@ jakeApp.controller('mainController', ['$scope', '$rootScope', '$routeParams', '$
 		    $(document).ready(function() {
 			    $(".intro").width(screenwidth).height(screenheight);
 			});
-					
-			$(window).resize(function() {
-			    $(".intro").width(screenwidth).height(screenheight);
-			    $(".intro").css("background-size", "cover");
-			});  
+				
 	   };
     	
 }]);

@@ -186,6 +186,8 @@ function init() {
 }
 
 $(window).resize(function() {
-    $(".intro").width(screenwidth).height(screenheight);
-    $(".intro").css("background-size", "cover");
-});  
+	var newSW = $(window).width();
+    var newSH = $(window).height();
+	$(".intro").width(newSW).height(newSH);
+	$(".intro").css("background-size", "cover");
+});

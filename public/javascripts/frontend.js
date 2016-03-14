@@ -41,7 +41,7 @@ jakeApp.controller('mainController', ['$scope', '$rootScope', '$routeParams', '$
 		    $(document).ready(function() {
 			    $(".intro").width(screenwidth).height(screenheight);
 			});
-				
+			
 	   };
     	
 }]);

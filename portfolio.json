@@ -28,10 +28,20 @@
     "poster" : "simplify.png",
     "link" : "http://knowledgesimplified.herokuapp.com"
   },
+  
+  {
+    "title" : "ShiporDeliver.com",
+    "episode_number" : "4",
+    "role" : "Developer and Writer",
+    "description" : "My blog on tech, business, careers, and philosophy.",
+    "tech_used" : "Javascript, HTML, CSS, PHP",
+    "poster" : "shipodeliver.png",
+    "link" : "http://shipordeliver.com"
+  },
 
   {
     "title" : "Careers.PitneyBowes.com",
-    "episode_number" : "4",
+    "episode_number" : "5",
     "role" : "Lead Developer and Project Manager",
     "description" : "Pitney Bowes was a client of Hodes looking for a brand new career website.",
     "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
@@ -41,7 +51,7 @@
 
   {
     "title" : "Time Tracking Robot",
-    "episode_number" : "5",
+    "episode_number" : "6",
     "role" : "Lead Hacker",
     "description" : "A nifty little Python script to fill out time.hodes.com",
     "tech_used" : "Python... soon to add Flask.",
@@ -51,7 +61,7 @@
 
   {
     "title" : "TiffanyCareers.com",
-    "episode_number" : "6",
+    "episode_number" : "7",
     "role" : "Frontend Developer",
     "description" : "Tiffany and Co. was a client of Hodes looking for a brand new career website.",
     "tech_used" : "Javascript, HTML, CSS, PHP, WordPress Enterprise",
@@ -61,7 +71,7 @@
 
   {
     "title" : "CrestandCo.com",
-    "episode_number" : "7",
+    "episode_number" : "8",
     "role" : "Frontend Developer",
     "description" : "A luxury e-commerce site built on Magento.",
     "tech_used" : "Javascript, HTML, CSS, PHP, Magento Enterprise",
@@ -71,7 +81,7 @@
 
   {
     "title" : "Elysee.us",
-    "episode_number" : "8",
+    "episode_number" : "9",
     "role" : "Frontend Developer",
     "description" : "A luxury e-commerce startup built on WordPress.",
     "tech_used" : "Javascript, HTML, CSS, PHP, WordPress",

@@ -36,10 +36,15 @@ jakeApp.controller('mainController', ['$scope', '$rootScope', '$routeParams', '$
       
       $scope.fullView = function()
 	    {
+	    	var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ? true : false;
 	    	var screenwidth = $(window).width();
 		    var screenheight = $(window).height();
 		    $(document).ready(function() {
-			    $(".intro").width(screenwidth).height(screenheight);
+		    	if (!isMobile) {
+			    	$(".intro").width(screenwidth).height(screenheight);
+		    	} else {
+			        $(".intro").css({'background-size':'cover','height':'600px'});
+			    }
 			});
 			
 	   };

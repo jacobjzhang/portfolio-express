@@ -170,6 +170,10 @@ a:focus {
     copy
 }
 
+@media(max-width:480px) {
+    .intro:before {height:900px;}
+}
+
 .intro .intro-body {
     display: table-cell;
     vertical-align: middle;
